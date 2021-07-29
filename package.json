@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "truffle": "^5.4.2"
+  },
+  "name": "tezer",
+  "version": "1.0.0",
+  "description": "BEP20 token",
+  "main": "index.js",
+  "author": "kaneda",
+  "license": "MIT"
+}
