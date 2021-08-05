@@ -1,6 +1,6 @@
 **Further description will be updated soon**
 
-##TODO
+## TODO
 
 - [X] Merge Tezer with Tezer Nano 
 - [ ] Organize libs, interfaces, utils
