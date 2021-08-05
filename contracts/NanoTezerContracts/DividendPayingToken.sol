@@ -21,7 +21,7 @@ contract DividendPayingToken is ERC20, Ownable, DividendPayingTokenInterface, Di
   using SafeMathUint for uint256;
   using SafeMathInt for int256;
 
-  address public immutable USDT = address(0x55d398326f99059fF775485246999027B3197955); 
+  address public immutable USDT = address(0x7182736f5C17330492fBbd559364E4F047455463); 
                                         
 
 

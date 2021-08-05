@@ -23,7 +23,7 @@ contract TEZER is ERC20, Ownable {
 
     address public deadWallet = 0x000000000000000000000000000000000000dEaD;
 
-    address public immutable USDT = address(0x55d398326f99059fF775485246999027B3197955); 
+    address public immutable USDT = address(0x7182736f5C17330492fBbd559364E4F047455463); 
 
     uint256 public swapTokensAtAmount = 9000 * (10**18);
     
@@ -81,7 +81,7 @@ contract TEZER is ERC20, Ownable {
     	address indexed processor
     );
 
-    constructor() public ERC20("Tezer", "Z") {
+    constructor() public ERC20("Tezer Nano", "TNANO") {
 
     	dividendTracker = new TEZERDividendTracker();
 
@@ -494,7 +494,7 @@ contract TEZERDividendTracker is Ownable, DividendPayingToken {
 
     event Claim(address indexed account, uint256 amount, bool indexed automatic);
 
-    constructor() public DividendPayingToken("TEZER_Dividen_Tracker", "TEZER_Dividend_Tracker") {
+    constructor() public DividendPayingToken("Nano Dividend Tracker", "N(DT)") {
     	claimWait = 86400;
         minimumTokenBalanceForDividends = 10000 * (10**18); //must hold 10000+ tokens
     }
@@ -527,7 +527,7 @@ contract TEZERDividendTracker is Ownable, DividendPayingToken {
     function updateMinimumHoldingsForReward(uint256 amount) external onlyOwner {
         require(amount != minimumTokenBalanceForDividends, "TEZER_Dividend_Tracker: Same value");
         emit MinimumTokenBalanceForDividendsUpdated(amount, minimumTokenBalanceForDividends);
-        minimumTokenBalanceForDividends = amount;
+        minimumTokenBalanceForDividends = amount * (10**18);
     }
 
     function getLastProcessedIndex() external view returns(uint256) {
